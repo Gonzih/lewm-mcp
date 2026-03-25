@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "lewm-mcp-model"
+version = "0.1.0"
+description = "Python model dependencies for lewm-mcp"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.35.0",
+    "Pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "opencv-python>=4.8.0; extra == 'video'",
+]
+
+[project.optional-dependencies]
+video = ["opencv-python>=4.8.0"]
+all = ["opencv-python>=4.8.0"]
+
+[tool.setuptools]
+packages = []

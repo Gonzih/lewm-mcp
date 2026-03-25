@@ -1,0 +1,45 @@
+{
+  "name": "lewm-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for LeWorldModel — visual anomaly detection for Claude Code agents",
+  "type": "module",
+  "bin": {
+    "lewm-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && cp src/model.py dist/model.py",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run"
+  },
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "25.5.0",
+    "typescript": "6.0.2",
+    "vitest": "4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gonzih/lewm-mcp.git"
+  },
+  "homepage": "https://github.com/gonzih/lewm-mcp",
+  "bugs": {
+    "url": "https://github.com/gonzih/lewm-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "jepa",
+    "world-model",
+    "visual-anomaly",
+    "vit",
+    "claude",
+    "ai"
+  ],
+  "license": "MIT"
+}
